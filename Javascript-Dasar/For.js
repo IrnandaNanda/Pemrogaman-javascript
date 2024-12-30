@@ -34,7 +34,7 @@ console.log("====================================");
 //Latihan 3
 let total = 0;
 for (i=1; i<=100; i++) {
-    total += i;
+    total += i; //total = total + i
 }
 console.log(" Total bilangan 1-100 adalah : " + total);
 
@@ -43,6 +43,6 @@ console.log("====================================");
 //Latihan 4
 let bintang = "*";
 for (i=1; i<=5; i++) {
-    bintang += "*";
+    bintang += "*"; //bintang = bintang + "*"
     console.log(bintang);
 }
