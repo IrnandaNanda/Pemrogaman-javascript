@@ -44,3 +44,33 @@ function calculateSquareArea(side) {
 }
 
 console.log(calculateSquareArea(5))
+
+//Latihan4
+function findMax(a,b,c) {
+
+    if (a > b && a > c) {
+        return a
+      } if (b > a && b > c) {
+        return b
+      } else if (c > a && c > b){
+        return c
+      }
+
+}
+console.log(findMax(3,44,1))
+
+//Latihan5 
+function reverse(str) {
+
+    //Pisahkan huruf menggunakan built function .split
+     let splitString = str.split(""); 
+ 
+     //Balik huruf yang sudah dipisah menggunakan built in function .reverse
+     let reverseArray = splitString.reverse();
+ 
+     //Gabungkan semua huruf yang di balik menggunakan built in function .join
+     let joinArray = reverseArray.join(""); 
+ 
+     return joinArray; // "olleh
+}
+console.log(reverse("Hello"))
