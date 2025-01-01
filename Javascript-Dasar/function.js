@@ -23,13 +23,10 @@ console.log(addNumbers(3,7))
 function isEven(num) {
 
     if (num % 2 == 0) {
-        console.log ("Genap")
+        return("Genap")
     } else {
-        console.log("Ganjil")
+        return("Ganjil")
     }
-
-    return num;
-
 }
 
 console.log(isEven(9));
