@@ -4,3 +4,10 @@ function tampilan(nama) {
 }
 
 console.log(tampilan("irnanda"));
+
+//Ini adalah function expresion
+let tampilkanPesan = function (nama) {
+    return ("halo" + nama);
+}
+
+console.log(tampilkanPesan)
