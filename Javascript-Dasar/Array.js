@@ -21,6 +21,8 @@ let myFunction = function () {
 let myArr2 = [123, 'Teks', true, myFunction()]
 console.log(myArr2)
 
-//Array dengan array
-let myArr3 = [123, 'Teks', false, myFunction(), [4,2,3,1]]
+//Array dengan array (Array Multidimensi)
+let myArr3 = [123, 'Teks', false, myFunction(), [4,5,6]]
 console.log(myArr3);
+
+console.log(myArr3[4][1]);
