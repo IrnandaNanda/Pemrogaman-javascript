@@ -27,3 +27,7 @@ console.table(nama)
 delete nama[3];
 console.table(nama);
 console.log("Panjang array nama sekarang adalah = " + nama.length);
+
+//Array 2 dimensi
+nama.push(["programmer", "zaman", "now"])
+console.table(nama)
