@@ -28,4 +28,10 @@ console.table(theDay)
 theDay.shift() // Menghapus Array Elemen Pertama
 console.table(theDay)
 
+// Mengganti value Array
+console.log(theDay)
+theDay[0] = "Kamis"
+theDay[1] = "Jumat"
+theDay[2] = "Sabtu"
+console.log(theDay)
 
