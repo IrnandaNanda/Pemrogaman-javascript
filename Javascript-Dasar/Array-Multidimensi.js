@@ -13,5 +13,5 @@ let activities = [
     ["Sleep", 8],
 ];
 console.table(activities)
-console.log(activities[0])
-console.log(activities[0][0])
+console.log(activities[0]) // Cara Mengambil Array 1 dimensi
+console.log(activities[0][0]) // Cara Mengambil Array multi-dimensi
