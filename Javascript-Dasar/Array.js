@@ -35,3 +35,25 @@ theDay[1] = "Jumat"
 theDay[2] = "Sabtu"
 console.log(theDay)
 
+// Copy by Reference
+// Artinya : Array hanya mengubah nama buah menjadi arr2 tetapi tidak mengubah value nya
+const buah = ["Mangga", "Pisang", "Jeruk"]
+const arr2 = buah
+arr2[0] = "Kedondong";
+
+console.log(buah)
+console.log(arr2)
+
+// Copy by value
+// Artinya : Sebuah Variabel hanya akan copy nilai/Value dari suatu Variabel
+let angka = 1
+let angka2 = angka
+console.log(angka, angka2)
+angka2 = 2;
+console.log(angka, angka2)
+
+
+// QUIZZ
+const Q = [1,2,3,4,7,8]
+const Q2 = [3,4,5,6]
+
