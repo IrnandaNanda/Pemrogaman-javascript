@@ -1,6 +1,6 @@
 const arr = ["Jeruk", 'Mangga', 'Pisang']
 
-console.log(arr.join(" ")) // Memmbuat array menjadi String dan memisahkan array dengan something ( Di kasus ini saya pisahkan menggunakan spasi )
+console.log(arr.join(" ")) // Memmbuat array menjadi String dan memisahkan array dengan tanda ( Di kasus ini saya pisahkan menggunakan spasi )
 
 // Cara mengisi array menggunakan looping
 const angka = new Array()
