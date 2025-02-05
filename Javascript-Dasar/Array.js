@@ -26,3 +26,10 @@ let myArr3 = [123, 'Teks', false, myFunction(), [4,5,6]]
 console.log(myArr3);
 
 console.log(myArr3[4][1]);
+
+let namaGuru = ["utami", "mahmud", "sadam", "husein"]
+
+console.table(namaGuru);
+for (i=0; i<namaGuru.length; i++) {
+    console.log(namaGuru[3])
+}

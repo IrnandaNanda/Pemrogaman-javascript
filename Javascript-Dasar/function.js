@@ -71,3 +71,9 @@ function reverse(str) {
      return joinArray; // "olleh
 }
 console.log(reverse("Hello"))
+
+let coba = "Irnanda";
+// let split = coba.split("")
+let membalikan = coba.reverse();
+console.log(coba)
+console.log(membalikan)
