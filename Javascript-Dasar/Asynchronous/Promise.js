@@ -66,3 +66,13 @@ readFileWithPromise().then(function(resolve){
 }).finally(function(){
     console.log('Promise Selesai di eksekusi')
 })
+
+// ?
+/**
+ * function readfile menerima 1 parameter yang didalam nya mengembalikan sebuah promise
+ * promise yang memang diisi 2 parameter yang seperti callback yaitu ...
+ * resolve : Ketika sebuah promise ditepati dan reject : Ketika sebuah promise di ingkari
+ * 
+ * untuk memanggil promise kita harus menggunakan ..
+ * .then : Ketika sebuah promise berstatus resolve dan .catch : Ketika sebuah promise berstatus reject
+ */
