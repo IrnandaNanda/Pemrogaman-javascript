@@ -8,33 +8,66 @@
  * 3. function untuk memfilter file yang dibutuhkan
  */
 
-    function readFile(filePath) {
+function readFile(filePath, callback) {
+  setTimeout(() => {
+    callback ({
+        "path": filePath,
+        "header": "Ini adalah header",
+        "content": "ini adalah content \n\n\n\tcontent ini adalah content\nini adalah paragraf terakhir dari content"
+    }) 
+  }, 1000);
+}
 
-        setTimeout(() => {
-            return {
-                "path": filePath,
-                "header": "Ini adalah header",
-                "content": "ini adalah content \n\n\n\tcontent ini adalah content\nini adalah paragraf terakhir dari content"
-            }
-        }, 1000);
-    }
+function prosesFile(data, callback) {
 
-    function prosesFile(data) {
-        return {
-            "header": data.header,
-            "content": data.content.split("\n")
-        }
-    }
+    setTimeout(() => {
 
-    function filterContent(data) {
-        return {
-            "header": data.header,
-            "content": data.content.filter((item) => item.length > 10)
-        }
-    }
+        callback( {
+          header: data.header,
+          content: data.content.split("\n"),
+        });
+    }, 500)
 
-    const data = readFile('file.txt')
-    const proses = prosesFile(data)
-    const content = filterContent(proses)
+}
 
-    console.log(proses)
+function filterContent(data, callback) {
+
+    setTimeout(() => {
+        callback({
+            header: data.header,
+            content: data.content.filter((item) => item.length > 10),
+          });
+    }, 200) 
+}
+
+// ? Cara 1
+// const data = readFile("file.txt");
+// const proses = prosesFile(data);
+// const content = filterContent(proses);
+
+// console.log(proses);
+
+// ? cara 2
+// readFile('file.txt', function(data) {
+//     const proses = prosesFile(data)
+//     const content = filterContent(proses)
+
+//     console.log(content)
+
+// })
+
+// ? Cara 3
+readFile('file.txt', function(data) {
+    prosesFile(data, function(prosesData) {
+        filterContent(prosesData, function(content){
+            console.log(content)
+        })
+    })
+
+})
+
+/**
+ * ketika sebuah function adalah asynchronous maka tidak boleh menggunakan return
+ * Callback adalah sebuah function yang kita gunakan di parameter
+ * callback digunakan ketika ada function async yang harus berjalan secara sync
+ */
